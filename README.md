@@ -1,20 +1,18 @@
-# TurtleCoin-Blockchain-Explorer
-Block explorer for TurtleCoin CryptoNote based cryptocurrency.
+# MIMI Money Blockchain Explorer
+Block explorer for MIMI Money CryptoNote based cryptocurrency.
 
 #### Installation
 
-1) It takes data from daemon turtlecoind. It should be accessible from the Internet. Run turtlecoind with open port as follows:
+1) It takes data from daemon MIMIMoneyd. It should be accessible from the Internet. Run MIMIMoneyd with open port as follows:
 ```bash
-./TurtleCoind --enable-cors="*" --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=11898
+./MIMIMoneyd --enable-cors="*" --enable_blockexplorer --rpc-bind-ip=0.0.0.0 --rpc-bind-port=39700
 ```
 2) Just upload to your website and change 'api' variable in config.js to point to your daemon.
 
 
 ### Development
 Devs:
-    @devopsralf
-
-Donate: [TRTL] TRTLv2RCPuD7AaaVpQkRPF59MMLx5WW3qFxwJz4Doy7dHhNA6UuQjEpLL3rpUQS4RXdQn8fb4P1XC3K62GeJjGgG8DP9LNaTrNL
+Copyright (c) 2018 MIMI Money Developers
 
 ### Note
 
