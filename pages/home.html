@@ -1,42 +1,42 @@
+
 <div class="row">
     <div class="col-sm-12 col-md-6">
         <div class="panel panel-default" id="network-stats">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-tasks fa-fw" aria-hidden="true"></i> Stats</h3>
+                <h3 class="panel-title"><i class="fas fa-tasks" aria-hidden="true"></i> Stats</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><i class="fa fa-bars"></i> Height: <span id="networkHeight"></span></li>
-                            <li><i class="fa fa fa-exchange"></i> Transactions: <span id="networkTransactions"></span></li>
-                            <li><i class="fa fa-certificate"></i> Reward: <span id="currentReward"></span></li>
-                            <li><i class="fa fa-money"></i> Supply: <span id="totalCoins"></span></li>
-                            <li><i class="fa fa-percent" aria-hidden="true"></i> Emission: <span id="emissionPercent"></span> %</li>
+                            <li><i class="fas fa-terminal"></i> Height: <b><span id="networkHeight"></span></b></li>
+                            <li><i class="fas fa-code-branch"></i> Transactions: <b><span id="networkTransactions"></span></b></li>
+                            <li><i class="far fa-gem"></i> Reward: <b><span id="currentReward"></span></b></li>
+                         <!--    <li><i class="fa fa-money"></i> Supply: <span id="totalCoins"></span></li>
+                            <li><i class="fa fa-percent" aria-hidden="true"></i> Emission: <span id="emissionPercent"></span> %</li> -->
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><i class="fa fa-unlock-alt"></i> Difficulty: <span id="networkDifficulty"></span></li>
-                            <li><i class="fa fa-lock"></i> Average Difficulty: <span id="avgDifficulty"></span></li>
-                            <li><i class="fa fa-tachometer"></i> Hash Rate: <span id="networkHashrate"></span></li>
-                            <li><i class="fa fa-clock-o"></i> Average Hash Rate: <span id="avgHashrate"></span></li>
-                            <!-- <li><a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Estimated block solve time at estimated network speed and current difficulty."><i class="fa fa-circle-o-notch" aria-hidden="true"></i> Solve time: <span id="blockSolveTime"></span></a></li> -->
+                            <li><i class="fas fa-th-large"></i> Difficulty: <b><span id="networkDifficulty"></span></b></li>
+                            <li><i class="fas fa-th"></i> Average Difficulty: <b><span id="avgDifficulty"></span></b></li>
+                            <li><i class="far fa-chart-bar"></i> Hash Rate: <b><span id="networkHashrate"></span></b></li>
+                     <!--   <li><i class="fa fa-clock-o"></i> Average Hash Rate: <span id="avgHashrate"></span></li>
+                            <li><a href="#" data-toggle="tooltip" data-placement="bottom" data-original-title="Estimated block solve time at estimated network speed and current difficulty."><i class="fa fa-circle-o-notch" aria-hidden="true"></i> Solve time: <span id="blockSolveTime"></span></a></li> -->
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-6 col-md-6">
+    <div class="col-sm-12 col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-area-chart" aria-hidden="true"></i> Charts
-                    <span class="text-default" data-toggle="tooltip" data-placement="right" data-original-title="Difficulty based on last blocks from the list below. Block size, transactions count. Load more blocks to enlarge chart range."><i class="fa fa-question-circle"></i></span>
-                </h3>
+                <input type="button" class="btn btn-default btn-xs pull-right" id="loadMoreBlocks" value="Load more">
+                <h3 class="panel-title"><i class="fas fa-chart-area" aria-hidden="true"></i> Difficulty chart </h3>
             </div>
-            <div class="panel-body chart-wrapper">
-                <canvas id="difficultyChart" height="210"></canvas>
+            <div class="panel-body-diff chart-wrapper"> 
+                <canvas id="difficultyChart" height="170"></canvas>
             </div>
         </div>
     </div>
@@ -44,21 +44,72 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3 class="panel-title"><i class="fa fa-exchange fa-fw" aria-hidden="true"></i> Transaction pool
-            <span id="mempool_count" class="badge"></span>
-            <span class="text-default" data-toggle="tooltip" data-placement="right" data-original-title="Recent transactions waiting to be included into a block. Once it happens a transaction gets into the blockchain and becomes confirmed."><i class="fa fa-question-circle"></i></span>
+            <div class="pull-right">
+            <a href="https://www.facebook.com/MIMIMoneyapp" target="_blank"><i class="fab fa-facebook-square" aria-hidden="true"></i>&nbsp;</a> 
+            <a href="https://twitter.com/MIMIMoneyapp" target="_blank"><i class="fab fa-twitter-square" aria-hidden="true"></i>&nbsp;</a>
+            <a href="#" target="_blank"><i class="fab fa-reddit-square" aria-hidden="true"></i>&nbsp;</a>
+            </div>
+        <h3 class="panel-title"><i class="fas fa-grip-horizontal" aria-hidden="true"></i> Links          
         </h3>
     </div>
     <div class="panel-body">
+            <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p>
+                                <a href="https://www.mimi.money" target="_blank"><i class="fab fa-angellist" aria-hidden="true"></i>&nbsp; <strong> MIMI Money WebSite</strong> </a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/mimimoney" target="_blank"><i class="fab fa-github-square" aria-hidden="true"></i>&nbsp;<strong> MIMI Money Github </strong> </a>- See source code
+                        </p>
+                        <p>
+                                <a href="https://discordinvite.mimi.money/" target="_blank"><i class="fab fa-discord" aria-hidden="true"></i>&nbsp;<strong> MIMI Money Discord </strong> </a>- Chat,memes,trolling
+                        </p>
+                        <p>
+                                <a href="https://medium.com/@mimimoney" target="_blank"><i class="fab fa-medium-m" aria-hidden="true"></i>&nbsp;<strong> MIMI Money Medium </strong> </a>- Articles from dev team - Coming soon
+                        </p>
+                        <p>
+                            <a href="https://www.mimi.money" target="_blank"><i class="fas fa-server" aria-hidden="true"></i>&nbsp;<strong> MIMI Money Nodes </strong> </a>- You can use public node for wallet
+                         </p>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <p>
+                                <a href="https://www.mimi.money/#faq" target="_blank"><i class="fas fa-coins" aria-hidden="true"></i>&nbsp;<strong> MIMI Money FAQs </strong> </a>- Get help
+                        </p>
+                        <p>
+                                <a href="#wallet"><i class="fas fa-wallet" aria-hidden="true"></i>&nbsp;<strong> Wallets </strong> </a>- GUI,CLI
+                        </p>
+                        <p>
+                                <a href="#miners"><i class="fas fa-toolbox" aria-hidden="true"></i>&nbsp;<strong>Miners </strong> </a>- download and instruction
+                        </p>
+                        <p>
+                                <a href="https://www.mimi.money/#wallets"><i class="fas fa-link" aria-hidden="true"></i>&nbsp;<strong>Blockchain </strong> </a>- download latest snap of chain
+                        </p>
+                        <p><i class="fas fa-handshake" aria-hidden="true"></i>&nbsp; <strong>Exchanges:</strong>  &nbsp;
+                            <a class="hot_link2" target="_blank" href="#"> Coming Soon &nbsp;</a>
+
+                        </p>
+                    </div>
+                </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+            <input type="button" class="btn btn-default btn-xs pull-right" onclick="tra()" value="Expand">
+        <h3 class="panel-title"><i class="fas fa-code-branch" aria-hidden="true"></i> Transaction pool
+            <span id="mempool_count" class="badge"></span>           
+        </h3>
+    </div>
+    <div id="tradiv" class="panel-body" style="display:none;">
         <div class="table-responsive">
             <table class="table table-hover" id="mem_pool_table">
                 <thead>
                     <tr>
                         <!-- <th width="30%"><i class="fa fa-clock-o"></i> Date &amp; time</th> Add this back when mempool json adds a-->
-                        <th width="10%"><i class="fa fa-money"></i> Amount</th>
-                        <th width="10%"><i class="fa fa-tag"></i> Fee</th>
-                        <th width="10%"><i class="fa fa-archive"></i> Size</th>
-                        <th width="40%"><i class="fa fa-paw"></i> Hash</th>
+                        <th width="10%"><i class="fas fa-dollar-sign"></i> Amount</th>
+                        <th width="10%"><i class="fab fa-buromobelexperte"></i> Fee</th>
+                        <th width="10%"><i class="fas fa-align-left"></i> Size</th>
+                        <th width="40%"><i class="fas fa-code"></i> Hash</th>
                     </tr>
                 </thead>
                 <tbody id="mem_pool_rows">
@@ -70,12 +121,13 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
+            <input type="button" class="btn btn-default btn-xs pull-right" onclick="blo()" value="Expand">
         <h3 class="panel-title">
-            <i class="fa fa-chain fa-fw" aria-hidden="true"></i> Recent blocks
-            <span id="block-range-wrapper" style="float:right">Viewing Range: <span id="block-range">______ - ______</span></span>
+            <i class="fas fa-dolly" aria-hidden="true"></i> Recent blocks
+             <span id="block-range-wrapper" style="display:none;"><span id="block-range" style="display:none;" >______ - ______  </span></span> 
         </h3>
     </div>
-    <div class="panel-body">
+    <div id="blodiv" class="panel-body" style="display:none;">
         <div class="input-group">
             <a id="next-page" href="#" class="btn btn-default input-group-addon disabled"><i class="fa fa-arrow-left" aria-hidden="true"></i> Newer</a>
             <span class="input-group-addon">№</span>
@@ -88,21 +140,18 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th><i class="fa fa-bars"></i> Height</th>
-                        <th><i class="fa fa-archive"></i> Size</th>
-                        <th><i class="fa fa-paw"></i> Block Hash</th>
-                        <th><i class="fa fa-unlock-alt"></i> Difficulty</th>
-                        <th><i class="fa fa-bars"></i> Txs</th>
-                        <th><i class="fa fa-clock-o"></i> Date &amp; time</th>
+                        <th><i class="fas fa-terminal"></i> Height</th>
+                        <th><i class="fas fa-align-left"></i> Size</th>
+                        <th><i class="fas fa-code"></i> Block Hash</th>
+                        <th><i class="fas fa-th-large"></i> Difficulty</th>
+                        <th><i class="fas fa-code-branch"></i> Txs</th>
+                        <th><i class="far fa-clock"></i> Date &amp; time</th>
                     </tr>
                 </thead>
                 <tbody id="blocks_rows">
                 </tbody>
             </table>
         </div>
-        <p class="text-center">
-            <button type="button" class="btn btn-default" id="loadMoreBlocks">Load More</button>
-        </p>
     </div>
 </div>
 
@@ -183,8 +232,8 @@
                     cache: 'false',
                     success: function(data) {
                     block = data.result.block;
-                        updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,2));
-                        updateText('emissionPercent', (block.alreadyGeneratedCoins / 100000000000000 * 100).toFixed(4));
+                     //   updateText('totalCoins', getReadableCoins(block.alreadyGeneratedCoins,2));
+                      //  updateText('emissionPercent', (block.alreadyGeneratedCoins / 100000000000000 * 100).toFixed(4));
                         updateText('currentReward', getReadableCoins(block.baseReward,4));
                     }
                 });
@@ -408,7 +457,7 @@
             localizeNumber(blocks[0].height),
             localizeNumber(blocks[blocks.length - 1].height)].join(' - ')
         updateText('block-range', rendered);
-    }
+    } 
 
     function calcAvgHashRate() {
         var sum = Difficulties.reduce(add, 0);
@@ -418,8 +467,8 @@
         var avgDiff = Math.round(sum / Difficulties.length);
         var avgHashRate = avgDiff / blockTargetInterval;
 
-        //updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 0).toString());
-        //updateText('avgHashrate', getReadableHashRateString(avgDiff / blockTargetInterval));
+        updateText('avgDifficulty', getReadableDifficultyString(avgDiff, 0).toString());
+        // updateText('avgHashrate', getReadableHashRateString(avgDiff / blockTargetInterval));
         // updateText('blockSolveTime', getReadableTime(lastStats.difficulty / avgHashRate)); Add back after timestamp is added to mempool
     }
 
@@ -493,48 +542,40 @@
             }, {
                 data: [].concat(Difficulties).reverse(),
                 yAxisID: "Difficulty",
-                label: "Difficulty",
-                backgroundColor: "rgba(220,220,220,0.2)",
-                borderColor: '#2FA4E7',
+                label: "Diff",
+                backgroundColor: "rgba(46,204,113,0)",
+                borderColor: '#2ecc71',
                 borderWidth: 2,
-                pointColor: "#2FA4E7",
-                pointBorderColor: "#2FA4E7",
-                pointHighlightFill: "#2FA4E7",
-                pointBackgroundColor: "#2FA4E7",
-                pointBorderWidth: 2,
-                pointRadius: 1,
-                pointHoverRadius: 3,
+                pointColor: "#2ecc71",
+                pointBorderColor: "#ffffff",
+                pointHighlightFill: "#ffffff",
+                pointBackgroundColor: "#2ecc71",
+                pointBorderWidth: 1,
+                pointRadius: 2,
+                pointHoverRadius: 1,
                 pointHitRadius: 20
             }, {
                 data: [].concat(Txses).reverse(),
                 yAxisID: "Transactions",
-                label: "Transactions",
-                backgroundColor: "rgba(255,242,0,0.1)",
-                borderColor: '#B5E61D',
-                borderWidth: 1,
-                pointColor: "#B5E61D",
-                pointBorderColor: "#B5E61D",
-                pointHighlightFill: "#B5E61D",
-                pointBackgroundColor: "#B5E61D",
-                pointBorderWidth: 1,
-                pointRadius: 1,
-                pointHoverRadius: 3,
-                pointHitRadius: 20
+                label: "Txs",
+                backgroundColor: "rgba(0,0,0,0)",
+                borderColor: 'rgba(0,0,0,0)',
+                borderWidth: 0,
+                pointBorderWidth: 0,
+                pointRadius: 0,
+                pointHoverRadius: 0,
+                pointHitRadius: 0,
             }, {
                 data: [].concat(Sizes).reverse(),
                 yAxisID: "Sizes",
                 label: "Size",
-                backgroundColor: "rgba(65,172,0,0.1)",
-                borderColor: '#99D9EA',
-                borderWidth: 1,
-                pointColor: "#99D9EA",
-                pointBorderColor: "#99D9EA",
-                pointHighlightFill: "#99D9EA",
-                pointBackgroundColor: "#99D9EA",
-                pointBorderWidth: 1,
-                pointRadius: 1,
-                pointHoverRadius: 3,
-                pointHitRadius: 20
+                backgroundColor: "rgba(0,0,0,0)",
+                borderColor: 'rgba(0,0,0,0)',
+                borderWidth: 0,
+                pointBorderWidth: 0,
+                pointRadius: 0,
+                pointHoverRadius: 0,
+                pointHitRadius: 0,
             }]
         };
 
@@ -738,9 +779,9 @@
         diffChart.update();
     }
 
-    $(function() {
+/*     $(function() {
         $('[data-toggle="tooltip"]').tooltip();
-    });
+    }); */
 
     function getReadableTime(seconds) {
 
@@ -768,4 +809,3 @@
         return formatAmounts(amount, units[units.length - 1][1]);
     }
 </script>
-<script src="./js/Chart.bundle.min.js"></script>

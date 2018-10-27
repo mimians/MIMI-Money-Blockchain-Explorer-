@@ -1,0 +1,134 @@
+
+<div class="container">
+	
+  <div class="row">
+    <div class="col-sm-12 col-md-24">
+      <center>
+				</br>
+        <h1 class="display-3 d-print-none" id="turtleTitle">TurtleCoin Wallet Generator</h1>
+      </center>
+    </div>
+  </div>
+
+<!-- <div class="row">
+    <center>
+    
+        <div class="col-sm-4">Apple Wallet <br> Img <br> Link </div>
+    <div class="col-sm-4">Windows Wallet <br> Img <br> Link </div>
+    <div class="col-sm-4">Linux Wallet <br> Img <br> Link </div>
+    </center>
+  </div> -->
+
+
+  <div class="row  d-print-none">
+    <div class="col-sm-12 col-md-24 d-print-none">
+			<center>
+      <h3>Step 1 </h3>
+          <button class="btn btn-default" onclick="js:show_generate();" type="button" value="Generate a wallet">Generate a Wallet</button> </br></br>
+          <button class="btn btn-default" onclick="js:show_restore();" type="button" value="restore keys from seed phrase">Restore keys from seed phrase</button> </br> </br>
+			</center>
+      <div id="generate" style="display:none;">
+				<i><p>For extra security, type a few random letters, words, numbers, or symbols below. Press "Generate Wallet" when you are done.</p></i>
+        <input id="user_entropy_widget" type="text" style="width:100%;" value="" placeholder="  The more random stuff you type in this box, the better your keys will be." /><br /><br />
+        <center>
+          <button class="btn btn-default" onclick="js:genwallet(null);" type="button" value="Generate wallet">Generate Wallet</button>
+        </center>
+      </div>
+     
+      <div id="restore" style="display: none;">
+        <input id="seed_phrase" type="text" style="width:100%;" value="" placeholder="Enter your seed phrase words here."/><br /><br />
+        <center>
+          <button class="btn btn-default" onclick="js:restore_keys(null);" type="button" value="Restore keys">Restore Keys</button>
+        </center>
+      </div>
+  
+    </div>
+  </div>
+
+  <div id="step2" class="row" style="display:none;">
+    <div class="col-sm-12 col-md-24">
+      <h4 class="d-print-none">Step 2</h4>
+			<i><p class="d-print-none">Write down your public address, or copy paste it somewhere. Anyone with this address can send you money.</p></i>
+      <h4 class="d-print-block">Public Address</h4>
+      <div class="col border border-success" style="padding: 1em;">
+      <center>
+        <strong>
+          <h2>
+						<span  style="font-family: monospace, monospace; word-wrap: break-word;" class="" id="address_widget">Reticulating Splines...</span>
+					</h2>
+
+        </strong>
+      </center>
+      </div>
+      <!--<p class="d-print-block">This is your wallet address. Anybody with this address can send you money.</p>
+
+        <span class="qrcode d-print-none" id="address_qr_widget" onclick="js:toggle_qr();"></span>
+
+
+      <br />
+      <center class="d-print-none">
+        <button class="btn btn-default" href="#" onclick="js:toggle_qr();">Click to see QR Code</button>
+      </center>
+    </div>
+  </div> -->
+  <div class="row" >
+  <div class="col-sm-12 col-md-24">
+    <h4 class="d-print-none">Step 3</h4>
+    <h4 class="d-print-block">Seed Phrase</h4>
+		<i><p class="d-print-none">Copy your seed phrase and keys. If you lose your wallet, these can be used to restore your money. That also means you need to keep them safe and private.</p></i>
+		<i><p class="d-print-block">This is your seed phrase. You can use it to regenerate your wallet if you lose it.</p></i>
+    <em>
+      <div class="col border border-danger" style="font-family: monospace, monospace; padding: 1em;">
+        <strong>Seed Phrase:</strong>
+        <span class="private">
+          <span id="mnemonic_widget">Reticulating Splines...</span>
+        </span>
+      </div>
+    </em>
+  </div>
+  </div> 
+  <br>
+  <div class="row d-print-block">
+    <div class="col-sm-12 col-md-24">
+      <h4 class="d-print-block">Wallet Keys</h4>
+			<i><p>These are the keys you need to regenerate your wallet.</p></i>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-24">
+     <!--p class="d-print-none">Print or write down these keys and keep them safe. Without them you cannot access your money. There are no second chances.</p-->
+    <div class="row border border-danger" style="padding:1em;">
+      <div class="col-sm-12 col-md-24" style="overflow:visible">
+        <strong>Spend Key:</strong>
+        <span class="private">
+          <span style="font-family: monospace, monospace; word-wrap: break-word;" id="spend_key_widget">Generating...</span>
+        </span>
+      </div>
+      <div class="col-sm-12 col-md-24" style="overflow:visible">
+        <strong>View Key:</strong>
+        <span class="private">
+          <span style="font-family: monospace, monospace; word-wrap: break-word;" id="view_key_widget">Generating...</span>
+        </span>
+      </div>
+      <!-- <div class="col-6">
+        <strong>GUI Wallet Key:</strong>
+        <span class="private-sm">
+          <small style="font-family: monospace, monospace; word-wrap: break-word;" id="wallet_keys_widget">Generating...</small>
+        </span>
+      </div> -->
+    </div>
+
+
+
+</div>
+<div class="row d-print-none">
+    <div class="col-sm-12 col-md-24">
+      <br/>
+			<br/>
+			<br/>
+    </div>
+</div>
+
+</div>
+</div>
+	<script type="text/javascript" src="../js/crypto_utils.js"></script>
+	<script type="text/javascript" src="../js/wallet.js"></script>

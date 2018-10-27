@@ -1,25 +1,24 @@
-<!-- // pools stats by MainCoins @ http://krb.mypool.name -->
 <div class="row">
-    <div class="col-sm-12 col-md-6">
+    <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="panel panel-default" id="network-stats">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-tachometer"></i> Stats</h3>
+                <h3 class="panel-title"><i class="fas fa-tasks"></i> Stats</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-md-6 col-xs-6">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><i class="fa fa-tachometer"></i> Pools speed: <span id="totalPoolsHashrate"></span></li>
-                            <li><i class="fa fa-tachometer"></i> Network speed: <span id="networkHashrate"></span></li>
-                            <li><i class="fa fa-group"></i> Total miners: <span id="total_miners"></span></li>
+                            <li><i class="fas fa-chart-bar"></i> Pools speed: <span id="totalPoolsHashrate"></span></li>
+                            <li><i class="far fa-chart-bar"></i> Net speed: <span id="networkHashrate"></span></li>
+                            <li><i class="fas fa-users"></i> Total miners: <span id="total_miners"></span></li>
 
                         </ul>
                     </div>
-                    <div class="col-sm-6 col-md-6">
+                    <div class="col-sm-6 col-md-6 col-xs-6">
                         <ul class="nav nav-pills nav-stacked">
-                            <li><i class="fa fa-unlock-alt"></i> Current difficulty: <span id="networkDifficulty"></span></li>
-                            <li><i class="fa fa-lock"></i> Average difficulty: <span id="avgDifficulty"></span></li>
-                            <li><i class="fa fa-tachometer"></i> Average Hashrate: <span id="avgHashrate"></span></li>
+                            <li><i class="fas fa-th-large"></i> Current difficulty: <span id="networkDifficulty"></span></li>
+                            <li><i class="fas fa-th"></i> Average difficulty: <span id="avgDifficulty"></span></li>
+                            <li><i class="fas fa-chart-line"></i> Average Hashrate: <span id="avgHashrate"></span></li>
                         </ul>
                     </div>
                 </div>
@@ -27,14 +26,14 @@
             </div>
         </div>
     </div>
-    <div class="col-sm-12 col-md-6">
+    <div class="col-lg-6 col-md-12 col-sm-12">
         <div class="panel panel-default" id="network-stats">
             <div class="panel-heading">
-                <h3 class="panel-title"><i class="fa fa-tachometer"></i> Estimate Mining Profits</h3>
+                <h3 class="panel-title"><i class="fas fa-calculator"></i> Estimate Mining Profits</h3>
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-sm-12 col-md-12">
+                    <div class="col-sm-12 col-md-12 col-xs-12">
                         <div id="calcHashHolder">
                             <div class="input-group">
                                 <input type="number" class="form-control" id="calcHashRate" placeholder="Enter your hash rate">
@@ -48,8 +47,7 @@
                                         <li><a href="#" data-mul="2">MH/s</a></li>
                                     </ul>
                                 </div>
-                                <span class="input-group-addon">=</span>
-                                <span class="input-group-addon" id="calcHashResultsHolder"><span id="calcHashAmount"></span> <span id="calcHashSymbol"></span> TRTL / day</span>
+                                <span class="input-group-addon" id="calcHashResultsHolder"><span id="calcHashAmount"></span> <span id="calcHashSymbol"></span> MIMI / day</span>
                             </div>
                         </div>
                     </div>
@@ -66,12 +64,12 @@
         <thead>
             <tr>
                 <th><span id="symbol"></span> Pools</th>
-                <th class="sorttable_numeric"><i class="fa fa-bars"></i> Height</th>
-                <th class="sorttable_numeric"><i class="fa fa-tachometer"></i> Hashrate</th>
-                <th class="sorttable_numeric"><i class="fa fa-group"></i> Miners</th>
-                <th class="sorttable_numeric"><i class="fa fa-money"></i> Total Fee</th>
-                <th class="sorttable_numeric"><i class="fa fa-sign-out"></i> Min. Payout</th>
-                <th><i class="fa fa-clock-o"></i> Last Block Found</th>
+                <th class="sorttable_numeric"><i class="fas fa-terminal"></i> Height</th>
+                <th class="sorttable_numeric"><i class="far fa-chart-bar"></i> Hashrate</th>
+                <th class="sorttable_numeric"><i class="fas fa-users"></i> Miners</th>
+                <th class="sorttable_numeric"><i class="fab fa-buromobelexperte"></i> Total Fee</th>
+                <th class="sorttable_numeric"><i class="far fa-money-bill-alt"></i> Min. Payout</th>
+                <th><i class="far fa-clock"></i> Last Block Found</th>
             </tr>
         </thead>
         <tbody id="pools_rows">
@@ -81,12 +79,16 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col-lg-6 col-lg-offset-3">
-            <canvas id="poolsChart" style="margin: 0 auto;" height="300"></canvas>
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-12">
+                <canvas id="poolsChart" style="margin: 0px auto; display: block; width: 555px; height: 555px;" width="100%" height="100%"></canvas>
+            </div>
+            <div class="col-lg-3 col-md-3">
+            </div>
         </div>
     </div>
-</div>
 
 <br />
 
